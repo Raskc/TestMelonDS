@@ -1,13 +1,13 @@
-name: CMake Build (Windows x86-64)
+dname: CMake Build (Windows x86-64)
 
 on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - second
   pull_request:
     branches:
-      - master
+      - second
 
 env:
   BUILD_TYPE: Release
