@@ -1,7 +1,6 @@
-dname: CMake Build (Windows x86-64)
+name: CMake Build (Windows x86-64)
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - season2
@@ -16,10 +15,11 @@ jobs:
   build:
 
     runs-on: windows-latest
-    
+
     defaults:
       run:
         shell: msys2 {0}
+
     steps:
     - uses: actions/checkout@v1
     - uses: msys2/setup-msys2@v2
@@ -40,5 +40,5 @@ jobs:
 
     - uses: actions/upload-artifact@v1
       with:
-        name: melonDS-windows-x86_64
+        name: melonDS-windows-x86_64-season2
         path: ${{runner.workspace}}\build\melonDS.exe
