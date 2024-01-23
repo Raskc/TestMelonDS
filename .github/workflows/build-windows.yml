@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - second
+      - season2
   pull_request:
     branches:
-      - second
+      - season2
 
 env:
   BUILD_TYPE: Release
